@@ -1,0 +1,4 @@
+- npm init (enter ate o final para configurar o app)
+- npm install express
+- npm install consign
+- npm install mysql2

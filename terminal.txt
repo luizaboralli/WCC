@@ -2,3 +2,6 @@
 - npm install express
 - npm install consign
 - npm install mysql2
+- npm install mysql
+
+Rodar o comando no mysql workbench ALTER USER 'root'@'localhost'IDENTIFIED WITH mysql_native_password BY 'admin123'

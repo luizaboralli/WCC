@@ -1,6 +1,14 @@
 const configExpress = require('./config/configExpress');
+const conexao = require('./infra/conexao')
+const Tabelas = require('./infra/Tabelas.js');
 
-app = configExpress(); //versões antigas do node precisa declarar o app como variavel
+conexao.connect(error => {
+    if(error) {
+        throw error;
+    };
+    Tabelas.init(conexao);
+    let app = configExpress();
 
-app.listen(3000, () => console.log('servidor rodando na porta 3000'));
+    app.listen(3000, () => console.log('servidor rodando na porta 3000'));
+}); 
 
